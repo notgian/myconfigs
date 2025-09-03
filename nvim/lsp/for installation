@@ -1,0 +1,9 @@
+brew install lua-language-server
+brew install gopls
+brew install ccls
+
+(pylsp)
+pip install python-lsp-server
+pip install pylsp-rope
+
+
