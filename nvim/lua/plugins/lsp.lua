@@ -14,11 +14,18 @@ return {
             local capabilities = require('blink.cmp').get_lsp_capabilities()
             local lspconfig = require('lspconfig')
 
-            lspconfig['lua_ls'].setup({ capabilities = capabilities })
-            lspconfig['ccls'].setup({ capabilities = capabilities })
-            lspconfig['gopls'].setup({ capabilities = capabilities })
-            lspconfig['pylsp'].setup({ capabilities = capabilities })
-            lspconfig['rust_analyzer'].setup({ capabilities = capabilities })
+            local lspList = {
+                'lua_ls',
+                'ccls',
+                'gopls',
+                'pylsp',
+                'rust_anal',
+            }
+
+            for i in pairs(lspList) do
+                lspconfig[lspList[i]].setup({ capabilities = capabilities })
+                vim.lsp.enable(lspList[i])
+            end
 
             vim.diagnostic.enable = true
             vim.diagnostic.config({

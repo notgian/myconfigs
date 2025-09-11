@@ -1,5 +1,5 @@
 return {
-    { 
+    {
         'theprimeagen/harpoon'
     },
 }
