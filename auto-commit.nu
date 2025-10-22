@@ -32,7 +32,7 @@ cp $"($env.HOME)/.tmux.conf" ./tmux/.tmux.conf
 
 
 print "Successfully copied all config files!"
-print "Create a new commit for the files? [N/y]"
+print "\nCreate a new commit for the files? [N/y]"
 let make_commit = (input -n 1)
 
 if ($make_commit != "y" and $make_commit != "Y") {
@@ -41,13 +41,13 @@ if ($make_commit != "y" and $make_commit != "Y") {
 }
 
 print "Creating a new commit..."
-print "Please enter a commit message. Press enter for default commit message."
+print "\nPlease enter a commit message. Press enter for default commit message."
 let message = (input --default "automated dev commit")
 
 git add .
 git commit -m $message
 
-print "Commit successful! Attempt to push to GitHub? [N/y]"
+print "\nCommit successful! Attempt to push to GitHub? [N/y]"
 let attempt_push = (input -n 1)
 
 if ($attempt_push != "y" and $attempt_push != "Y") {

@@ -19,7 +19,6 @@ return {
                 'ccls',
                 'gopls',
                 'pylsp',
-                'rust_anal',
             }
 
             for i in pairs(lspList) do
@@ -32,6 +31,7 @@ return {
                 virtual_text = true,
                 signs = true,
             })
+
 
         end
     }

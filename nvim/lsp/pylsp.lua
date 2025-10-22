@@ -37,5 +37,5 @@ return {
         'requirements.txt',
         'Pipfile',
         '.git',
-    },
+    }
 }
