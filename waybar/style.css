@@ -1,0 +1,58 @@
+@import "mocha.css";
+
+* {
+    font-family: 'Fantasque Sans Mono';
+    font-size: 14px;
+    min-height: 0;
+}
+
+
+window#waybar {
+    background-color: alpha(#0f0f0f, 0.9);
+}
+
+#waybar {
+    border-radius: 3em;
+    background: @surface0;
+    color: @text;
+    margin: 5px 5px;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power,
+#network,
+#temperature {
+    background-color: @surface0;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    margin: 5px 8px;
+    color: @complement0;
+}
+
+#network {
+    background: linear-gradient(45deg, #a30b2f, #272252);
+}
+
+#clock, #temperature {
+    font-weight: bold;
+    font-size: 150%;
+    background: none;
+}
+
+#custom-power {
+    margin-left: 1rem;
+}
+
+#tray {
+    margin-left: 2rem;
+}
+
+#battery {
+    margin-right: 2rem;
+}

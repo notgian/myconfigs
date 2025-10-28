@@ -12,7 +12,6 @@ return {
         },
         config = function()
             local capabilities = require('blink.cmp').get_lsp_capabilities()
-            local lspconfig = require('lspconfig')
 
             local lspList = {
                 'lua_ls',
@@ -22,7 +21,7 @@ return {
             }
 
             for i in pairs(lspList) do
-                lspconfig[lspList[i]].setup({ capabilities = capabilities })
+                vim.lsp.config[lspList[i]].capabilities = capabilities
                 vim.lsp.enable(lspList[i])
             end
 
@@ -31,6 +30,8 @@ return {
                 virtual_text = true,
                 signs = true,
             })
+
+            vim.lsp.enable('jdtls')
 
 
         end
