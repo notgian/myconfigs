@@ -16,15 +16,16 @@
         "format-icons": ["☀"]
     },
 
-
     "network#speed": {
         "interval": 5,
-        "format": "⮉ {bandwidthUpBytes} ⮋ {bandwidthDownBytes}",
+        "format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+
     }, 
 
     "network#name": {
         "interval": 5,
-        "format": "ᯤ {essid}",
+        "format": "{icon}{essid}",
+        "format-icons": [" "]
     }, 
 
     "temperature": {
@@ -66,13 +67,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "🔋 {capacity}%",
+        "format": "{icon}{capacity}%",
+        "format-icons": [" ", " ", " ", " "]
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": " ",
         "format-icons": {
             "default": ["", "", " "]
         },

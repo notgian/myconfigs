@@ -26,7 +26,7 @@ echo "Making new commit..."
 
 # Making the commit
 if [[ -z $description ]]; then # no description
-    git commit -m $message
+    git commit -m "$message"
 else # with description
     git commit -m "$message" -m "$description"
 fi

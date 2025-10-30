@@ -13,6 +13,7 @@ local_folders=(
     "waybar"
     "zsh"
     "niri"
+    "wlogout"
 )
 
 # list the configs that can be obtained from the default ./config directory
@@ -21,6 +22,7 @@ config_defaults=(
     "ghostty"
     "waybar"
     "niri"
+    "wlogout"
 )
 
 # List the config files that need to be manually obtained

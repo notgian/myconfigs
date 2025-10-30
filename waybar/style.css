@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-    font-family: 'Fantasque Sans Mono';
+    font-family: 'Fantasque Sans Mono', "FontAwesome";
     font-size: 14px;
     min-height: 0;
 }
