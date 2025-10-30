@@ -1,9 +1,0 @@
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-#
-# docs: https://ghostty.org/docs/config.
-# reload: Ctrl + Shift + Comma
-
-background-opacity = 0.8
-window-decoration = none
-command = zsh
