@@ -3,7 +3,7 @@ names = "nvim ghostty waybar niri wlogout"
 default_location = "/home/notgian/.config"
 
 [config_custom.tmux]
-files = "/home/notgian/.tmux.conf"
+files = "/home/notgian/.tmux.conf;otherfile.exe"
 
 [config_custom.zsh]
 files = "/home/notgian/.zshrc"
