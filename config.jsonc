@@ -1,0 +1,99 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-left": ["tray", "network#speed", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "network#name", "battery"],
+     
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["☀"]
+    },
+
+    "network#speed": {
+        "interval": 5,
+        "format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+
+    }, 
+
+    "network#name": {
+        "interval": 5,
+        "format": "{icon}{essid}",
+        "format-icons": [" "]
+    }, 
+
+    "temperature": {
+        "thermal-zone": 2,
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C "
+    },
+
+    "clock": {
+        "timezone": "Asia/Manila",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%d-%m-%Y}",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}{capacity}%",
+        "format-icons": [" ", " ", " ", " "]
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": ["", "", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout &",
+        "format": "⤫"
+    }, 
+
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 30
+    }
+}

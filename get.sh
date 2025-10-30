@@ -73,9 +73,9 @@ function get_manual_configs() {
 # Running the functions in order.
 
 remake_folders ${local_folders[@]}
-#
-# echo "Getting configs from default config directory ~/.config" 
-# get_default_configs ${config_defaults[@]}
-#
+
+echo "Getting configs from default config directory ~/.config" 
+get_default_configs ${config_defaults[@]}
+
 echo "Getting other configs manually..."
 get_manual_configs config_files_custom
