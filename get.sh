@@ -1,37 +1,6 @@
 #!/bin/bash
 
-# INSTRUCTIONS:
-# Edit only the start portion of this file with the necessary
-# details. These variables serve to tell the script what folders to
-# make, which configs to get, etc.
-
-# List all the local folders to create/recreate. 
-local_folders=( 
-    "nvim" 
-    "tmux" 
-    "ghostty"
-    "waybar"
-    "zsh"
-    "niri"
-    "wlogout"
-)
-
-# list the configs that can be obtained from the default ./config directory
-config_defaults=(
-    "nvim"
-    "ghostty"
-    "waybar"
-    "niri"
-    "wlogout"
-)
-
-# List the config files that need to be manually obtained
-# from a set location using an associative array. Define 
-# multiple files by listing in one string delimited with a semicolon (;)
-#   ex.: file-1.conf;file2.conf
-declare -A config_files
-config_files["tmux"]="$HOME/.tmux.conf;otherfile.txt"
-config_files["zsh"]="$HOME/.zshrc"
+source ./parse_configs.sh
 
 # =================================
 #           Script proper
@@ -103,11 +72,10 @@ function get_manual_configs() {
 
 # Running the functions in order.
 
-remake_folders "${local_folders[@]}"
-
-echo "Getting configs from default config directory ~/.config" 
-get_default_configs ${config_defaults[@]}
-
+remake_folders ${local_folders[@]}
+#
+# echo "Getting configs from default config directory ~/.config" 
+# get_default_configs ${config_defaults[@]}
+#
 echo "Getting other configs manually..."
-get_manual_configs config_files
-
+get_manual_configs config_files_custom
