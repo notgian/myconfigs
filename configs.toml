@@ -1,9 +1,9 @@
 [config_defaults]
-names = "nvim ghostty waybar niri wlogout"
+names = "nvim ghostty waybar niri wlogout noctalia"
 default_location = "/home/notgian/.config"
 
 [config_custom.tmux]
-files = "/home/notgian/.tmux.conf;otherfile.exe"
+files = "/home/notgian/.tmux.conf"
 
 [config_custom.zsh]
 files = "/home/notgian/.zshrc"

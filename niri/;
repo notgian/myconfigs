@@ -384,8 +384,8 @@ binds {
 // For my background <3
 // spawn-at-startup "swww-daemon"
 // spawn-at-startup "swww" "img" "/usr/share/wallpapers/cachyos-wallpapers/RedNekoLady.png"
+spawn-at-startup "killall" "mako"
 spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "nvim" "/home/notgian/todo.md"
 spawn-at-startup "ghostty"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

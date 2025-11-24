@@ -1,5 +1,14 @@
+# start ssh-agent
+eval $(ssh-agent)
+ssh-add ~/.ssh/thpserver
+
+
+
+
 # fastfetch greeting
+clear
 fastfetch
+
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -12,6 +21,7 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 bindkey -v
 

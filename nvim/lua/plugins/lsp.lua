@@ -18,6 +18,7 @@ return {
                 'ccls',
                 'gopls',
                 'pylsp',
+                'rlangserver'
             }
 
             for i in pairs(lspList) do
@@ -27,8 +28,19 @@ return {
 
             vim.diagnostic.enable = true
             vim.diagnostic.config({
-                virtual_text = true,
+
+                virtual_lines = {
+                    severity = vim.diagnostic.severity.ERROR,
+                },
+                virtual_text = {
+                    severity = vim.diagnostic.severity.WARN,
+                    current_line = true
+                },
+                underline = {
+                    severity = vim.diagnostic.severity.WARN
+                },
                 signs = true,
+                update_in_insert = true
             })
 
             vim.lsp.enable('jdtls')
