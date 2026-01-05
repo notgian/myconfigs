@@ -6,6 +6,12 @@
 // Input device configuration.
 // https://yalter.github.io/niri/Configuration:-Input
 
+// ========================================================================
+// VERY IMPORTANT NOTE: EDIT THE TEMPLATE FILE ONLY
+// EDITING THE KDL FILE DIRECTLY MAY RESULT IN CHANGES BEING OVERWRITTEN 
+// WHEN CHANGING WALLPAPERS
+// ========================================================================
+prefer-no-csd 
 
 input {
     keyboard {
@@ -39,8 +45,7 @@ layout {
 
     focus-ring {
         width 4
-        active-color "#ed7bb6"
-        inactive-color "#fa5c81"
+        active-color "#d3c0d8"
     }
 
     shadow {
@@ -53,10 +58,10 @@ layout {
     }
 
     struts {
-        left 24
-        right 24
-        top 16
-        bottom 12
+        left 4
+        right 4
+        top 0
+        bottom 4
     }
 }
 
@@ -104,13 +109,22 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 20
+    geometry-corner-radius 5
     clip-to-geometry true
 }
 
 window-rule {
     match app-id="com.mitchellh.ghostty" at-startup=true
     open-maximized true
+}
+
+// For games
+window-rule {
+    // match app-id="com.mitchellh.ghostty" at-startup=true
+    match app-id="insertappidhere"
+    open-maximized true
+    open-floating false
+    open-fullscreen true
 }
 
 window-rule {
@@ -122,7 +136,7 @@ window-rule {
 
 window-rule {
     match is-active=false
-    opacity 0.8
+    opacity 0.85
 }
 
 
@@ -158,11 +172,11 @@ binds {
     Mod+Ctrl+O { toggle-window-rule-opacity;  }
     Mod+Space { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "controlCenter" "toggle";  }
     Mod+I { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle";  }
-    Mod+W { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallaper" "random";  }
+    Mod+W { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle";  }
 
     // Mod+W { spawn-sh "$HOME/myconfigs/other/scripts/reload_waybar.sh" ; }
-    Shift+Ctrl+L { spawn "wlogout" "-b" "4"; }
-    Mod+Shift+L { spawn-sh "$HOME/myconfigs/other/scripts/better_swaylock.sh"; }
+    // Shift+Ctrl+L { spawn "wlogout" "-b" "4"; }
+    // Mod+Shift+L { spawn-sh "$HOME/myconfigs/other/scripts/better_swaylock.sh"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -216,23 +230,23 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    // Mod+Shift+Left  { focus-monitor-left; }
-    // Mod+Shift+Down  { focus-monitor-down; }
-    // Mod+Shift+Up    { focus-monitor-up; }
-    // Mod+Shift+Right { focus-monitor-right; }
-    // Mod+Shift+H     { focus-monitor-left; }
-    // Mod+Shift+J     { focus-monitor-down; }
-    // Mod+Shift+K     { focus-monitor-up; }
-    // Mod+Shift+L     { focus-monitor-right; }
+    // mod+shift+left  { focus-monitor-left; }
+    // mod+shift+down  { focus-monitor-down; }
+    // mod+shift+up    { focus-monitor-up; }
+    // mod+shift+right { focus-monitor-right; }
+    Mod+Shift+H     { focus-monitor-left; }
+    Mod+Shift+J     { focus-monitor-down; }
+    Mod+Shift+K     { focus-monitor-up; }
+    Mod+Shift+L     { focus-monitor-right; }
     //
     // Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     // Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
     // Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
     // Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-    // Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    // Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    // Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    // Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }

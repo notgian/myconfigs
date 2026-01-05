@@ -1,5 +1,5 @@
 [config_defaults]
-names = "nvim ghostty waybar niri wlogout noctalia"
+names = "nvim ghostty niri noctalia fuzzel"
 default_location = "/home/notgian/.config"
 
 [config_custom.tmux]

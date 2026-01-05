@@ -123,7 +123,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "matugenSchemeType": "scheme-rainbow",
-        "predefinedScheme": "Catppuccin",
+        "predefinedScheme": "Cyberpunk",
         "schedulingMode": "off",
         "useWallpaperColors": true
     },
@@ -273,15 +273,15 @@
         "discord_lightcord": false,
         "discord_vesktop": false,
         "discord_webcord": false,
-        "enableUserTemplates": false,
+        "enableUserTemplates": true,
         "foot": false,
-        "fuzzel": false,
-        "ghostty": false,
-        "gtk": false,
-        "kcolorscheme": false,
+        "fuzzel": true,
+        "ghostty": true,
+        "gtk": true,
+        "kcolorscheme": true,
         "kitty": false,
         "pywalfox": false,
-        "qt": false,
+        "qt": true,
         "vicinae": false
     },
     "ui": {
@@ -294,7 +294,7 @@
     },
     "wallpaper": {
         "defaultWallpaper": "/home/notgian/.config/quickshell/noctalia-shell/Assets/Wallpaper/noctalia.png",
-        "directory": "/home/notgian/myconfigs/other/wallpapers",
+        "directory": "/home/notgian/wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "fillColor": "#000000",
@@ -303,7 +303,17 @@
             {
                 "directory": "/home/notgian/myconfigs/other/wallpapers",
                 "name": "eDP-1",
-                "wallpaper": "/home/notgian/myconfigs/other/wallpapers/PinkLady.png"
+                "wallpaper": "/home/notgian/wallpapers/cyber-radio-thingies.jpg"
+            },
+            {
+                "directory": "/home/notgian/wallpapers",
+                "name": "winit",
+                "wallpaper": "/home/notgian/wallpapers/1028801.jpg"
+            },
+            {
+                "directory": "/home/notgian/wallpapers",
+                "name": "HDMI-A-1",
+                "wallpaper": "/home/notgian/wallpapers/1338702.png"
             }
         ],
         "randomEnabled": false,

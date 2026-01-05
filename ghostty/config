@@ -4,6 +4,7 @@
 # docs: https://ghostty.org/docs/config.
 # reload: Ctrl + Shift + Comma
 
-background-opacity = 0.9
+background-opacity = 0.8
 window-decoration = false
 command = zsh
+theme = noctalia
