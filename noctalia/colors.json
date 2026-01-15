@@ -1,12 +1,12 @@
 {
-  "mPrimary": "#e6b4ff",
-  "mOnPrimary": "#491765",
+  "mPrimary": "#cebdff",
+  "mOnPrimary": "#361f73",
 
-  "mSecondary": "#d3c0d8",
-  "mOnSecondary": "#382c3e",
+  "mSecondary": "#cbc3dc",
+  "mOnSecondary": "#322e41",
 
-  "mTertiary": "#f4b7b7",
-  "mOnTertiary": "#4c2526",
+  "mTertiary": "#efb8c9",
+  "mOnTertiary": "#492533",
 
   "mError": "#ffb4ab",
   "mOnError": "#690005",

@@ -1,0 +1,15 @@
+# Fuzzel Colors
+# Generated with Matugen
+
+[colors]
+background=131313CC
+text=e2e2e2ff
+prompt=cbc3dcff
+placeholder=efb8c9ff
+input=cebdffff
+match=efb8c9ff
+selection=cebdff80
+selection-text=e2e2e2ff
+selection-match=361f73ff
+counter=cbc3dcff
+border=cebdffff

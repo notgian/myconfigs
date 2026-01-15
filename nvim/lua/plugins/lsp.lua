@@ -18,14 +18,19 @@ return {
                 'ccls',
                 'gopls',
                 'pylsp',
-                'rlangserver'
+                'rlangserver',
+                'html',
+                'css',
+                'json',
+                'ts_ls',
+                'quick_lint_js'
             }
 
             for i in pairs(lspList) do
                 vim.lsp.config[lspList[i]].capabilities = capabilities
                 vim.lsp.enable(lspList[i])
             end
-
+ 
             vim.diagnostic.enable = true
             vim.diagnostic.config({
 

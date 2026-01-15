@@ -45,7 +45,7 @@ layout {
 
     focus-ring {
         width 4
-        active-color "#d3c0d8"
+        active-color "#cbc3dc"
     }
 
     shadow {

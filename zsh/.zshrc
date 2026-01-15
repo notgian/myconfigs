@@ -28,5 +28,5 @@ bindkey -v
 # my aliases
 alias nv=nvim
 alias cdcode="cd ~/Documents/Coding\ Projs\ Linux"
-alias cdschool="cd ~/Nextcloud/School\ Files"
+alias cdschool="cd ~/Nextcloud/School\ Files/AY\ 2025-2026/Second\ Trimester"
 alias cdcloud="cd ~/Nextcloud"
